@@ -17,15 +17,15 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-10 w-36 h-24 playable-blur rounded-2xl animate-pulse opacity-35" style={{ animationDelay: '1.5s' }} />
         <div className="absolute top-1/3 right-10 w-40 h-28 playable-blur rounded-2xl animate-pulse opacity-55" style={{ animationDelay: '3s' }} />
 
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <h1 className="druk-style text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-black leading-[0.8] mb-8 animate-fade-in">
-            <span className="text-foreground block">AI</span>
-            <span className="gradient-text block">PLAYABLES</span>
-            <span className="text-foreground block">ARE</span>
+        <div className="container mx-auto px-6 text-center relative z-10 py-16">
+          <h1 className="druk-style text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-black leading-[0.9] mb-12 animate-fade-in">
+            <span className="text-foreground block mb-4">AI</span>
+            <span className="gradient-text block mb-4">PLAYABLES</span>
+            <span className="text-foreground block mb-4">ARE</span>
             <span className="gradient-text block">NEXT</span>
           </h1>
           
-          <div className="mt-12">
+          <div className="mt-16">
             <button
               onClick={() => setIsModalOpen(true)}
               className="group inline-flex items-center gap-3 text-xl md:text-2xl font-medium text-foreground hover:text-primary transition-all duration-300 animate-fade-in border border-foreground/20 px-8 py-4 rounded-full hover:border-primary/50"

@@ -99,6 +99,13 @@ export default {
 						transform: 'scale(1)',
 						opacity: '1'
 					}
+				},
+				'lightning-move': {
+					'0%': { transform: 'translate(0, 0) rotate(0deg)' },
+					'25%': { transform: 'translate(-5%, -5%) rotate(1deg)' },
+					'50%': { transform: 'translate(5%, -10%) rotate(-1deg)' },
+					'75%': { transform: 'translate(-3%, 5%) rotate(0.5deg)' },
+					'100%': { transform: 'translate(0, 0) rotate(0deg)' }
 				}
 			},
 			animation: {
@@ -106,10 +113,11 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out'
+				'scale-in': 'scale-in 0.4s ease-out',
+				'lightning-move': 'lightning-move 8s linear infinite'
 			},
 			fontFamily: {
-				'display': ['"GLD Display"', 'Georgia', 'serif'],
+				'display': ['Oswald', 'Inter', 'sans-serif'],
 				'sans': ['Inter', 'sans-serif']
 			}
 		}

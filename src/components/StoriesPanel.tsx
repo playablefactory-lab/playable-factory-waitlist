@@ -1,24 +1,23 @@
-
 const StoriesPanel = () => {
   const playableExamples = [
     {
       id: 1,
-      title: "Double down on your winners",
-      description: "Evolve your winning playables with real changes: new gameplay elements, mechanics, environments, and rules. Think deep twists that keep performance fresh.",
+      title: "AI-Powered Creative Generation",
+      description: "Our intelligent algorithms analyze your best-performing content and automatically generate new playable variations with fresh mechanics, themes, and interactive elements that maintain your winning formula.",
       image: "/lovable-uploads/85e9903f-c804-4bbd-8e96-a45544df08a4.png",
       bgGradient: "from-blue-900/40 to-green-500/40"
     },
     {
       id: 2,
-      title: "Autonomous agents turn your performance into playable ads",
-      description: "Sett's agentic workflows identify what's working, generate data-driven hypotheses, and turn them into new playable ads, so every test moves you closer to a winner.",
+      title: "Smart Performance Optimization",
+      description: "Playable Factory's machine learning continuously monitors user engagement, identifies winning patterns, and automatically optimizes your playable ads for maximum conversion rates across all platforms.",
       image: "/lovable-uploads/85e9903f-c804-4bbd-8e96-a45544df08a4.png",
       bgGradient: "from-amber-600/40 to-orange-500/40"
     },
     {
       id: 3,
-      title: "Turn your video ads into playables",
-      description: "Sett helps you repurpose your top-performing video ads into high-quality playables. Fast and on-brand.",
+      title: "Seamless Creative Transformation",
+      description: "Transform your existing video ads, static creatives, and marketing assets into engaging playable experiences. Our AI maintains your brand identity while adding interactive elements that drive results.",
       image: "/lovable-uploads/85e9903f-c804-4bbd-8e96-a45544df08a4.png",
       bgGradient: "from-purple-600/40 to-pink-500/40"
     }

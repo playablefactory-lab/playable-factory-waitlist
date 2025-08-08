@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import WaitlistModal from './WaitlistModal';
@@ -25,7 +26,7 @@ const HeroSection = () => {
         <div 
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(244, 163, 169, 0.15) 0%, rgba(244, 163, 169, 0.08) 25%, transparent 50%)`,
+            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(244, 163, 169, 0.25) 0%, rgba(244, 163, 169, 0.12) 25%, transparent 50%)`,
             transition: 'background 0.3s ease-out'
           }}
         />

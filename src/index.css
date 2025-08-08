@@ -62,6 +62,11 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Smooth section transitions */
+  section {
+    transition: all 0.6s ease-in-out;
+  }
 }
 
 @layer components {
@@ -89,7 +94,7 @@
   
   .lightning-bg {
     position: relative;
-    background: linear-gradient(135deg, #0f1419 0%, #1a2332 25%, #243447 50%, #1a2332 75%, #0f1419 100%);
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #3730a3 50%, #312e81 75%, #1e1b4b 100%);
     overflow: hidden;
   }
   
@@ -101,11 +106,11 @@
     width: 100%;
     height: 100%;
     background-image: 
-      linear-gradient(45deg, rgba(99, 102, 241, 0.1) 0%, transparent 25%),
-      linear-gradient(-45deg, rgba(139, 92, 246, 0.1) 0%, transparent 25%),
-      linear-gradient(135deg, rgba(99, 102, 241, 0.05) 50%, transparent 75%);
+      linear-gradient(45deg, rgba(99, 102, 241, 0.15) 0%, transparent 25%),
+      linear-gradient(-45deg, rgba(139, 92, 246, 0.15) 0%, transparent 25%),
+      linear-gradient(135deg, rgba(99, 102, 241, 0.1) 50%, transparent 75%);
     background-size: 200px 200px, 150px 150px, 300px 300px;
-    animation: lightning-move 8s linear infinite;
+    animation: lightning-move 12s linear infinite;
     pointer-events: none;
   }
   
@@ -117,23 +122,42 @@
     width: 100%;
     height: 100%;
     background-image: 
-      radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+      radial-gradient(ellipse at top, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
     pointer-events: none;
   }
   
   .druk-style {
     font-family: 'Oswald', 'Inter', sans-serif;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 0.85;
+    letter-spacing: -0.04em;
+    line-height: 0.8;
     text-transform: uppercase;
+    font-stretch: expanded;
   }
   
   .playable-blur {
-    backdrop-filter: blur(8px);
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    backdrop-filter: blur(12px);
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .playable-blur:hover {
+    background: rgba(99, 102, 241, 0.2);
+    transform: scale(1.05);
+  }
+
+  /* Smooth section spacing */
+  .section-spacing {
+    padding: 6rem 0;
+    transition: padding 0.3s ease-in-out;
+  }
+
+  @media (min-width: 768px) {
+    .section-spacing {
+      padding: 8rem 0;
+    }
   }
 }
 
@@ -154,8 +178,8 @@
 
 @keyframes lightning-move {
   0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(-5%, -5%) rotate(1deg); }
-  50% { transform: translate(5%, -10%) rotate(-1deg); }
-  75% { transform: translate(-3%, 5%) rotate(0.5deg); }
+  25% { transform: translate(-3%, -3%) rotate(0.5deg); }
+  50% { transform: translate(3%, -6%) rotate(-0.5deg); }
+  75% { transform: translate(-2%, 3%) rotate(0.3deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 }

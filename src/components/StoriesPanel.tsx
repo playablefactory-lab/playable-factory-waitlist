@@ -1,30 +1,70 @@
 
 const StoriesPanel = () => {
+  const playableExamples = [
+    {
+      id: 1,
+      title: "Double down on your winners",
+      description: "Evolve your winning playables with real changes: new gameplay elements, mechanics, environments, and rules. Think deep twists that keep performance fresh.",
+      image: "/lovable-uploads/85e9903f-c804-4bbd-8e96-a45544df08a4.png",
+      bgGradient: "from-blue-900/40 to-green-500/40"
+    },
+    {
+      id: 2,
+      title: "Autonomous agents turn your performance into playable ads",
+      description: "Sett's agentic workflows identify what's working, generate data-driven hypotheses, and turn them into new playable ads, so every test moves you closer to a winner.",
+      image: "/lovable-uploads/85e9903f-c804-4bbd-8e96-a45544df08a4.png",
+      bgGradient: "from-amber-600/40 to-orange-500/40"
+    },
+    {
+      id: 3,
+      title: "Turn your video ads into playables",
+      description: "Sett helps you repurpose your top-performing video ads into high-quality playables. Fast and on-brand.",
+      image: "/lovable-uploads/85e9903f-c804-4bbd-8e96-a45544df08a4.png",
+      bgGradient: "from-purple-600/40 to-pink-500/40"
+    }
+  ];
+
   return (
     <section className="section-spacing relative bg-gradient-to-b from-transparent to-background/30">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-          <div className="text-center animate-scale-in">
-            <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-3xl mb-8 flex items-center justify-center transition-all duration-300 hover:scale-105">
-              <div className="w-20 h-20 bg-primary/40 rounded-full animate-pulse"></div>
-            </div>
-            <h3 className="font-display text-3xl font-bold text-foreground">
-              AI Adapts
-            </h3>
-          </div>
-          
-          <div className="text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
-            <div className="w-full h-64 bg-gradient-to-br from-purple-500/20 to-primary/20 rounded-3xl mb-8 flex items-center justify-center transition-all duration-300 hover:scale-105">
-              <div className="grid grid-cols-3 gap-2">
-                {Array.from({ length: 9 }).map((_, i) => (
-                  <div key={i} className="w-6 h-6 bg-gradient-to-br from-primary/60 to-purple-500/60 rounded" />
-                ))}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {playableExamples.map((example, index) => (
+            <div
+              key={example.id}
+              className="group animate-scale-in bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-500 hover:border-primary/30"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              {/* Image/Visual Section */}
+              <div className={`relative h-80 bg-gradient-to-br ${example.bgGradient} flex items-center justify-center overflow-hidden`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-background/20 to-transparent"></div>
+                <div className="relative z-10 w-48 h-48 bg-gradient-to-br from-primary/30 to-purple-500/30 rounded-2xl backdrop-blur-md border border-primary/20 flex items-center justify-center">
+                  <div className="grid grid-cols-3 gap-2">
+                    {Array.from({ length: 9 }).map((_, i) => (
+                      <div 
+                        key={i} 
+                        className={`w-6 h-6 rounded ${i % 3 === 0 ? 'bg-primary/60' : i % 3 === 1 ? 'bg-purple-500/60' : 'bg-accent/60'} animate-pulse`}
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      />
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Floating elements for visual interest */}
+                <div className="absolute top-4 right-4 w-8 h-8 bg-primary/30 rounded-full animate-float"></div>
+                <div className="absolute bottom-6 left-6 w-6 h-6 bg-purple-500/30 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+              </div>
+
+              {/* Content Section */}
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  {example.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {example.description}
+                </p>
               </div>
             </div>
-            <h3 className="font-display text-3xl font-bold text-foreground">
-              Zero Code
-            </h3>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="relative h-screen flex items-center justify-center lightning-bg overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center lightning-bg overflow-hidden pt-20">
         {/* Playable Examples - Blurred */}
         <div className="absolute top-20 left-20 w-48 h-32 playable-blur rounded-2xl animate-pulse opacity-60" />
         <div className="absolute top-40 right-32 w-40 h-28 playable-blur rounded-2xl animate-pulse opacity-40" style={{ animationDelay: '1s' }} />
@@ -18,10 +18,10 @@ const HeroSection = () => {
         <div className="absolute top-1/3 right-10 w-40 h-28 playable-blur rounded-2xl animate-pulse opacity-55" style={{ animationDelay: '3s' }} />
 
         <div className="container mx-auto px-6 text-center relative z-10 py-16">
-          <h1 className="druk-style text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-black leading-[0.9] mb-12 animate-fade-in">
-            <span className="text-foreground block mb-4">AI</span>
-            <span className="gradient-text block mb-4">PLAYABLES</span>
-            <span className="text-foreground block mb-4">ARE</span>
+          <h1 className="druk-style text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black leading-[0.85] mb-12 animate-fade-in">
+            <span className="text-foreground block mb-6">AI</span>
+            <span className="gradient-text block mb-6">PLAYABLES</span>
+            <span className="text-foreground block mb-6">ARE</span>
             <span className="gradient-text block">NEXT</span>
           </h1>
           

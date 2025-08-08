@@ -17,23 +17,19 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-10 w-16 h-16 bg-primary/20 rounded-full blur-lg floating-animation" style={{ animationDelay: '-4s' }} />
 
         <div className="container mx-auto px-6 text-center relative z-10">
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold mb-8 animate-fade-in">
-            <span className="gradient-text">AI Playables</span>
+          <h1 className="font-display text-8xl md:text-9xl lg:text-[12rem] font-bold mb-12 leading-none animate-fade-in">
+            <span className="text-foreground">AI</span>
             <br />
-            <span className="text-foreground">Are Next</span>
+            <span className="gradient-text">PLAYABLES</span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Interactive ads that learn and play.
-          </p>
           
           <button
             onClick={() => setIsModalOpen(true)}
-            className="group inline-flex items-center gap-3 text-lg font-medium text-foreground hover:text-primary transition-all duration-300 animate-fade-in"
+            className="group inline-flex items-center gap-3 text-2xl font-medium text-foreground hover:text-primary transition-all duration-300 animate-fade-in"
             style={{ animationDelay: '0.4s' }}
           >
-            Want in? Join the waitlist
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+            Join Waitlist
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" />
           </button>
         </div>
       </section>

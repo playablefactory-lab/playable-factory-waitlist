@@ -58,7 +58,7 @@ const PlayfulCTASection = () => {
                 onMouseEnter={handleMissButtonHover}
                 onTouchStart={handleMissButtonHover}
               >
-                Miss the Future
+                Be Forgotten
               </button>
             </div>
             

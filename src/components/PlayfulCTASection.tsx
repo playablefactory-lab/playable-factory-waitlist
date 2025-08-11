@@ -15,7 +15,7 @@ const PlayfulCTASection = () => {
       const newY = Math.random() * 40 + 30; // Keep between 30-70%
       setMissButtonPosition({ x: newX, y: newY });
       
-      setTimeout(() => setIsRunning(false), 1000);
+      setTimeout(() => setIsRunning(false), 300);
     }
   };
 
@@ -34,7 +34,7 @@ const PlayfulCTASection = () => {
             {/* Left side container for Miss the Future Button */}
             <div className="relative w-full md:w-1/2 h-40 md:h-60">
               <button
-                className={`absolute transition-all duration-500 ease-out bg-destructive text-destructive-foreground px-6 py-3 rounded-full font-medium hover:shadow-lg ${isRunning ? 'scale-110' : ''}`}
+                className={`absolute transition-all duration-200 ease-out bg-destructive text-destructive-foreground px-6 py-3 rounded-full font-medium hover:shadow-lg ${isRunning ? 'scale-110' : ''}`}
                 style={{
                   left: `${missButtonPosition.x}%`,
                   top: `${missButtonPosition.y}%`,

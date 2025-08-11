@@ -11,9 +11,24 @@ const PlayfulCTASection = () => {
   const handleMissButtonHover = () => {
     if (!isRunning) {
       setIsRunning(true);
-      const newX = Math.random() * 30 + 10; // Keep between 10-40% (left side)
-      const newY = Math.random() * 40 + 30; // Keep between 30-70%
-      setMissButtonPosition({ x: newX, y: newY });
+      // Ensure button moves to corners or edges where it's harder to click
+      const positions = [
+        { x: 15, y: 20 }, // top-left area
+        { x: 15, y: 80 }, // bottom-left area
+        { x: 35, y: 15 }, // top area
+        { x: 35, y: 85 }, // bottom area
+        { x: 20, y: 40 }, // middle-left
+        { x: 30, y: 65 }, // lower-middle
+      ];
+      
+      // Pick a random position that's different from current
+      const currentPos = missButtonPosition;
+      let newPos;
+      do {
+        newPos = positions[Math.floor(Math.random() * positions.length)];
+      } while (Math.abs(newPos.x - currentPos.x) < 10 && Math.abs(newPos.y - currentPos.y) < 15);
+      
+      setMissButtonPosition(newPos);
       
       setTimeout(() => setIsRunning(false), 300);
     }

@@ -2,9 +2,8 @@
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import ShowcaseSection from '@/components/ShowcaseSection';
-import AboutSection from '@/components/AboutSection';
-import StoriesPanel from '@/components/StoriesPanel';
-import CTASection from '@/components/CTASection';
+import FeaturesSection from '@/components/FeaturesSection';
+import PlayfulCTASection from '@/components/PlayfulCTASection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -13,9 +12,8 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <ShowcaseSection />
-      <AboutSection />
-      <StoriesPanel />
-      <CTASection />
+      <FeaturesSection />
+      <PlayfulCTASection />
       <Footer />
     </div>
   );

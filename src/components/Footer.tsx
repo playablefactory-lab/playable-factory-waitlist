@@ -4,11 +4,15 @@ const Footer = () => {
     <footer className="border-t border-border py-12">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="font-display text-lg gradient-text mb-4 md:mb-0">
-            Playable Factory
+          <div className="flex items-center gap-3 mb-4 md:mb-0">
+            <img 
+              src="/lovable-uploads/7f6bca4d-2236-4a43-980a-5df158fce3c2.png" 
+              alt="Playable Factory" 
+              className="h-6 w-auto"
+            />
           </div>
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
-            <span>© 2024 Playable Factory</span>
+            <span>© 2025 Playable Factory</span>
             <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
             <a href="#" className="hover:text-foreground transition-colors">Terms</a>
           </div>
